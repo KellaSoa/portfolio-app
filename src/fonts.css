@@ -1,0 +1,10 @@
+/* fonts.css */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "Raleway";
+  src: url("path/to/raleway.woff2") format("woff2"),
+    url("path/to/raleway.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
