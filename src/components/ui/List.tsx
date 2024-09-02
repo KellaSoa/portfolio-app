@@ -1,3 +1,4 @@
+import { Link as ScrollLink } from "react-scroll";
 type MenuType = {
   id: number;
   value: string;
@@ -13,7 +14,9 @@ export default function List({ menus, className }: ListProps) {
     <div>
       <ul className={className}>
         {menus.map((menu) => (
-          <li key={menu.id}>{menu.value}</li>
+          <li key={menu.id}>
+            <ScrollLink to={menu.value}>{menu.value}</ScrollLink>
+          </li>
         ))}
       </ul>
     </div>
