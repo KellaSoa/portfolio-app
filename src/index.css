@@ -6,10 +6,9 @@
 
 @layer base {
   body {
-    @apply font-[Raleway];
+    font-family: "Raleway", sans-serif;
   }
   li {
-    @apply px-4
-    @apply cursor-pointer;
+    @apply px-4 cursor-pointer;
   }
 }
