@@ -14,6 +14,7 @@ import FireBase from "../../assets/firebase.png";
 import GitHub from "../../assets/github.png";
 import Tailwind from "../../assets/tailwind.png";
 import Mongo from "../../assets/mongo.png";
+import wordpress from "../../assets/wordpress.png";
 
 export const skillConfig = [
   {
@@ -95,5 +96,10 @@ export const skillConfig = [
     id: 8,
     value: "MONGO DB",
     image: Mongo,
+  },
+  {
+    id: 9,
+    value: "Wordpress",
+    image: wordpress,
   },
 ];
