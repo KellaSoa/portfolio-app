@@ -8,14 +8,20 @@ type ListSkills = {
 };
 export default function List({ skills }: ListSkills) {
   return (
-    <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8">
+    <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8 ">
       {skills.map((skill) => (
         <div
           key={skill.id}
-          className="shadow-md shadow-[#040c16] hover:scale-110 duration-500"
+          className="shadow-md shadow-primary bg-primary  rounded-md hover:scale-110 duration-500 flex flex-col items-center justify-center p-4"
         >
-          <img className="w-20 mx-auto" src={skill.image} alt={skill.value} />
-          <p className="my-4">{skill.value}</p>
+          <div className="flex items-center justify-center w-24 h-24 bg-white rounded-full">
+            <img
+              className="w-16 h-16 object-contain"
+              src={skill.image}
+              alt={skill.value}
+            />
+          </div>
+          <p className="mt-4 text-yellow font-bold uppercase">{skill.value}</p>
         </div>
       ))}
     </div>

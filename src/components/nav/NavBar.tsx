@@ -13,7 +13,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 z-10">
+    <div className=" w-full h-[80px] flex justify-between items-center px-4 bg-primary text-white z-10">
       <div>
         <img src={Logo} alt="logo" style={{ width: "50px" }} />
       </div>
@@ -27,12 +27,12 @@ export default function NavBar() {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } absolute top-[80px] left-0 w-full bg-[#0a192f] text-center md:hidden`}
+        } absolute top-[80px] left-0 w-full bg-primary text-center md:hidden`}
       >
         <List menus={menuConfig} className="flex flex-col" />
       </div>
       {/* Social icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+      <div className="hidden lg:flex fixed flex-col top-[35%] left-0 z-20">
         <List menus={menuSocial} className="flex flex-col py-4" />
       </div>
     </div>

@@ -1,4 +1,3 @@
-import { Link as ScrollLink } from "react-scroll";
 import { ReactElement, useEffect, useState } from "react";
 
 type MenuType = {
@@ -40,15 +39,15 @@ export default function List({ menus, className }: ListProps) {
             } ${menu.icon ? "w-[160px]" : ""} `}
           >
             <a
-              className={`flex justify-between items-center w-full text-gray-300 ${
+              className={`flex justify-between items-center w-full text-white ${
                 !menu.icon
-                  ? "hover:inline hover:border-b-4 hover:border-pink-600 active:text-cyan-300"
-                  : "" // Apply yellow underline if no icon
+                  ? "hover:inline hover:border-b-4 hover:border-pink active:text-yellow"
+                  : ""
               } ${
                 activeMenu === `#${menu.value.toLowerCase()}`
-                  ? "text-pink-600 font-bold"
+                  ? "text-yellow font-bold"
                   : ""
-              }`} // Apply yellow color if active
+              }`}
               href={`#${menu.value.toLowerCase()}`}
             >
               {menu.value} {menu.icon && menu.icon}
