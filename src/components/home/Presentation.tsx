@@ -1,18 +1,28 @@
+import myPhoto from "../../assets/kella-.png";
 export default function Presentation() {
   return (
-    <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
-      <p className="text-pink-600">Hi, my name is</p>
-      <h1 className="text-4xl sm:text-7xl font-bold text-[#ccd6f6]">
-        Kella Rianjafimamonjisoa
-      </h1>
-      <h2 className="text-4xl sm:text-7xl font-bold text-[#8892b0]">
-        I'm a Full Stack Developer.
-      </h2>
-      <p className="text-[#8892b0] py-4 max-w-[700px]">
-        I’m a full-stack developer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building responsive full-stack web applications.
-      </p>
+    <div className="flex flex-col md:flex-row items-center gap-8 w-full z-10">
+      <div className="w-full md:w-1/2 ">
+        <img
+          src={myPhoto}
+          alt="Kella"
+          className="rounded-lg w-[400px] sm:w-[500px] lg:w-[600px]"
+        />
+      </div>
+      <div className="w-full md:w-1/2 text-center md:text-left">
+        <p className="text-secondary font-bold">Hi, my name is</p>
+        <h3 className="text-xl sm:text-xl font-bold text-white">
+          Kella Rianjafimamonjisoa
+        </h3>
+        <h2 className="text-4xl sm:text-7xl font-bold text-pink">
+          I'm a Full Stack Developer.
+        </h2>
+        <p className="text-white py-4 max-w-[700px]">
+          I’m a full-stack developer specializing in building (and occasionally
+          designing) exceptional digital experiences. Currently, I’m focused on
+          building responsive full-stack web applications.
+        </p>
+      </div>
     </div>
   );
 }
