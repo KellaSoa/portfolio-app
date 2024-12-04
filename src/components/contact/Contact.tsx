@@ -8,9 +8,7 @@ export default function Contact() {
           Contact
         </p>
         <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          {/* Left Section */}
           <div className="sm:text-left font-bold text-pink flex items-center relative">
-            {/* Larger Image Positioned Above the Paragraph */}
             <img
               src={myPhoto}
               alt="author"
@@ -23,7 +21,6 @@ export default function Contact() {
               Submit the form.
             </p>
           </div>
-          {/* Right Section */}
           <form
             method="POST"
             action="https://getform.io/f/anlljzxa"
