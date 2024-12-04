@@ -1,22 +1,43 @@
-export const menuConfig = [
+type LanguageContent = {
+  en: string;
+  fr: string;
+};
+
+interface DataMenu {
+  id: number;
+  value: LanguageContent;
+}
+export const menuConfig: DataMenu[] = [
   {
     id: 0,
-    value: "Home",
+    value: {
+      en: "Home",
+      fr: "Acceuil",
+    },
   },
   {
     id: 1,
-    value: "About",
+    value: {
+      en: "About",
+      fr: "About FR",
+    },
   },
   {
     id: 2,
-    value: "Skills",
+    value: {
+      en: "Skills",
+      fr: "Skills FR",
+    },
   },
   {
     id: 3,
-    value: "Work",
+    value: {
+      en: "Work",
+      fr: "work FR",
+    },
   },
   {
     id: 4,
-    value: "Contact",
+    value: { en: "Contact", fr: "Contact" },
   },
 ];
