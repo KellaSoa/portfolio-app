@@ -2,7 +2,7 @@ import myPhoto from "../../assets/kella-.png";
 export default function Presentation() {
   return (
     <div className="flex flex-col md:flex-row items-center gap-8 w-full z-10">
-      <div className="w-full md:w-1/2 ">
+      <div className="w-full md:w-1/2 mt-5">
         <img
           src={myPhoto}
           alt="Kella"
