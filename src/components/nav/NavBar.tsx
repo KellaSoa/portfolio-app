@@ -13,7 +13,7 @@ export default function NavBar() {
   };
 
   return (
-    <div className=" w-full h-[80px] flex justify-between items-center px-4 bg-primary text-white z-10">
+    <div className=" fixed top-0 left-0 shadow-md z-50 w-full h-[80px] flex justify-between items-center px-4 bg-primary text-white z-10">
       <div>
         <img src={Logo} alt="logo" style={{ width: "50px" }} />
       </div>
@@ -27,7 +27,7 @@ export default function NavBar() {
       <div
         className={`${
           isMenuOpen ? "block" : "hidden"
-        } absolute top-[80px] left-0 w-full bg-primary text-center md:hidden`}
+        } absolute top-[80px] left-0 w-full bg-primary mobile text-center md:hidden`}
       >
         <List menus={menuConfig} className="flex flex-col" />
       </div>

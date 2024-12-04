@@ -8,6 +8,7 @@ type MenuSocialItem = {
   value: string;
   icon?: ReactElement;
   bgColor?: string;
+  link: string;
 };
 
 export const menuSocial: MenuSocialItem[] = [
@@ -15,24 +16,28 @@ export const menuSocial: MenuSocialItem[] = [
     id: 0,
     value: "Linkedin",
     icon: <FaLinkedin size={30} />,
-    bgColor: "bg-blue-600",
+    bgColor: "bg-[#4055b3]",
+    link: "",
   },
   {
     id: 1,
     value: "Github",
     icon: <FaGithub size={30} />,
-    bgColor: "#333333",
+    bgColor: "bg-[#333333]",
+    link: "",
   },
   {
     id: 2,
     value: "Email",
     icon: <HiOutlineMail size={30} />,
-    bgColor: "bg-[#6fc2b0]",
+    bgColor: "bg-[#6f7ec2]",
+    link: "",
   },
   {
     id: 3,
     value: "Resume",
     icon: <BsFillPersonLinesFill size={30} />,
     bgColor: "bg-[#565f69]",
+    link: "",
   },
 ];

@@ -20,7 +20,7 @@ export default {
         white: "#ffffff",
         black: "#000000",
         yellow: "#d7a745",
-        pink: "#Caa98b",
+        pink: "#deb1a8",
         blue: "#6b796a",
         blush: "#10302a",
         "hero-gradient-from": "rgba(2, 65, 62, 0.95)",

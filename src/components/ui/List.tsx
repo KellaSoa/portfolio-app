@@ -41,11 +41,11 @@ export default function List({ menus, className }: ListProps) {
             <a
               className={`flex justify-between items-center w-full text-white ${
                 !menu.icon
-                  ? "hover:inline hover:border-b-4 hover:border-pink active:text-yellow"
+                  ? "hover:border-b-4 hover:border-pink hover:text-pink active:border-b-4 active:border-yellow active:text-yellow"
                   : ""
               } ${
-                activeMenu === `#${menu.value.toLowerCase()}`
-                  ? "text-yellow font-bold"
+                activeMenu === `#${menu.value.toLowerCase()}` && !menu.icon
+                  ? "border-b-4 border-yellow text-yellow font-bold"
                   : ""
               }`}
               href={`#${menu.value.toLowerCase()}`}
