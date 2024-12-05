@@ -1,27 +1,32 @@
-import React, { createContext, useContext, useState, ReactNode } from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
-type Language = "en" | "fr";
-interface LanguageContextType {
-  language: Language;
-  switchLanguage: (lang: Language) => void;
-}
+type LanguageContextType = {
+  language: string;
+  switchLanguage: (lang: string) => void;
+};
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined
 );
 
-interface LanguageProviderProps {
-  children: ReactNode;
-}
-
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({
+export const LanguageProvider = ({
   children,
+}: {
+  children: React.ReactNode;
 }) => {
-  const [language, setLanguage] = useState<Language>("fr"); // Default language is 'fr'
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language); // Use i18n's current language
 
-  const switchLanguage = (lang: Language) => {
-    setLanguage(lang);
+  const switchLanguage = (lang: string) => {
+    i18n.changeLanguage(lang); // Change i18n language
+    setLanguage(lang); // Update context state
   };
+
+  // Keep context in sync with i18n
+  useEffect(() => {
+    setLanguage(i18n.language);
+  }, [i18n.language]);
 
   return (
     <LanguageContext.Provider value={{ language, switchLanguage }}>
@@ -30,7 +35,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
   );
 };
 
-export const useLanguage = (): LanguageContextType => {
+// eslint-disable-next-line react-refresh/only-export-components
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (!context) {
     throw new Error("useLanguage must be used within a LanguageProvider");

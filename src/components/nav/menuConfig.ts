@@ -1,43 +1,26 @@
-type LanguageContent = {
-  en: string;
-  fr: string;
-};
-
 interface DataMenu {
   id: number;
-  value: LanguageContent;
+  value: string;
 }
 export const menuConfig: DataMenu[] = [
   {
     id: 0,
-    value: {
-      en: "Home",
-      fr: "Acceuil",
-    },
+    value: "home",
   },
   {
     id: 1,
-    value: {
-      en: "About",
-      fr: "About FR",
-    },
+    value: "about",
   },
   {
     id: 2,
-    value: {
-      en: "Skills",
-      fr: "Skills FR",
-    },
+    value: "skills",
   },
   {
     id: 3,
-    value: {
-      en: "Work",
-      fr: "work FR",
-    },
+    value: "work",
   },
   {
     id: 4,
-    value: { en: "Contact", fr: "Contact" },
+    value: "contact",
   },
 ];

@@ -1,24 +1,21 @@
 import { ReactElement, useEffect, useState } from "react";
-import { useLanguage } from "../../context/LanguageContext.tsx";
-
-type LanguageContent = {
-  en: string;
-  fr: string;
-};
+import { useTranslation } from "react-i18next";
 
 type MenuType = {
   id: number;
-  value: string | LanguageContent; // value can be a string or a LanguageContent object
-  icon?: ReactElement; // Nullable
-  bgColor?: string; // Nullable
+  value: string;
+  icon?: ReactElement;
+  bgColor?: string;
+  link?: string;
 };
 
 type ListProps = {
   className?: string;
   menus: MenuType[];
+  onClick?: () => void;
 };
 
-export default function List({ menus, className }: ListProps) {
+export default function List({ menus, className, onClick }: ListProps) {
   const [activeMenu, setActiveMenu] = useState<string>("");
 
   useEffect(() => {
@@ -35,20 +32,17 @@ export default function List({ menus, className }: ListProps) {
     };
   }, []);
 
-  const { language } = useLanguage();
-
+  const { t } = useTranslation();
   return (
     <>
       <ul className={className}>
         {menus.map((menu) => {
-          // Determine the value based on whether it's a string or LanguageContent object
-          const menuValue =
-            typeof menu.value === "string" ? menu.value : menu.value[language];
-
+          const valueMenu = menu.icon ? menu.value : t(`${menu.value}.title`);
+          const valueSlug = menu.icon ? menu.link : t(`${menu.value}.slug`);
           return (
             <li
               key={menu.id}
-              className={`h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${
+              className={`h-[60px] flex justify-between items-center ml-[-100px] md:hover:ml-[-10px] duration-300 ${
                 menu.bgColor
               } ${menu.icon ? "w-[160px]" : ""} `}
             >
@@ -58,13 +52,15 @@ export default function List({ menus, className }: ListProps) {
                     ? "hover:border-b-4 hover:border-pink hover:text-pink active:border-b-4 active:border-yellow active:text-yellow"
                     : ""
                 } ${
-                  activeMenu === `#${menuValue.toLowerCase()}` && !menu.icon
+                  activeMenu === `#${valueMenu}` && !menu.icon
                     ? "border-b-4 border-yellow text-yellow font-bold"
                     : ""
                 }`}
-                href={`#${menuValue.toLowerCase()}`}
+                href={menu.link ? menu.link : `#${valueSlug}`}
+                target={menu.link ? "_blank" : "_self"}
+                onClick={onClick}
               >
-                {menuValue} {menu.icon && menu.icon}
+                {`${valueMenu}`} {menu.icon && menu.icon}
               </a>
             </li>
           );

@@ -3,7 +3,7 @@ import Title from "./Title";
 
 export default function About() {
   return (
-    <div id="about" className="w-full text-gray-300">
+    <div id="about" className="w-full text-gray-300 mt-5">
       <div className="flex flex-col justify-center items-center ">
         <Title />
         <Description />

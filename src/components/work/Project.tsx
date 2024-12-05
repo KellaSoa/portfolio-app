@@ -17,6 +17,9 @@ type ProjectProps = {
 
 export default function Project({ projects }: ProjectProps) {
   const { language } = useLanguage();
+
+  console.log("langue work ", language);
+
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-6">
       {projects.map((project) => (
