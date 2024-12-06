@@ -1,9 +1,14 @@
+import { useLanguage } from "../../context/LanguageContext.tsx";
+type LanguageContent = {
+  en: string;
+  fr: string;
+};
 type ProjectType = {
   id: number;
-  name: string;
+  name: LanguageContent;
   image: string;
   link?: string;
-  overview: string;
+  overview: LanguageContent;
 };
 
 type ProjectProps = {
@@ -11,6 +16,10 @@ type ProjectProps = {
 };
 
 export default function Project({ projects }: ProjectProps) {
+  const { language } = useLanguage();
+
+  console.log("langue work ", language);
+
   return (
     <div className="grid sm:grid-cols-2 md:grid-cols-2 gap-6">
       {projects.map((project) => (
@@ -24,16 +33,16 @@ export default function Project({ projects }: ProjectProps) {
           <div className="relative p-4">
             <img
               src={project.image}
-              alt={project.name}
+              alt={project.name[language]}
               className="w-full h-full object-cover rounded-md"
             />
           </div>
 
           <div className="p-4 flex flex-col">
             <h3 className="text-xl font-semibold text-yellow uppercase mb-2">
-              {project.name}
+              {project.name[language]}
             </h3>
-            <p className="text-white">{project.overview}</p>
+            <p className="text-white">{project.overview[language]}</p>
           </div>
         </a>
       ))}

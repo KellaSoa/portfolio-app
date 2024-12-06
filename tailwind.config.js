@@ -16,10 +16,10 @@ export default {
       colors: {
         transparent: "transparent",
         primary: "#02413e",
-        secondary: "#d7a745",
+        secondary: "#edc015",
         white: "#ffffff",
         black: "#000000",
-        yellow: "#d7a745",
+        yellow: "#edc015",
         pink: "#deb1a8",
         blue: "#6b796a",
         blush: "#10302a",

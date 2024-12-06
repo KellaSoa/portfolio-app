@@ -1,35 +1,36 @@
 import myPhoto from "../../assets/kella-.png";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
   return (
     <div id="contact" className="w-full flex justify-center items-center p-4">
       <div className="pb-8">
         <p className="text-4xl text-yellow font-bold inline border-b-4 border-yellow">
-          Contact
+          {t("contact.title")}
         </p>
-        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
-          <div className="sm:text-left font-bold text-pink flex items-center relative">
+        <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4 mt-5">
+          <div className="order-2 lg:order-1 sm:text-left text-center text-pink items-center grid grid-rows-1 md:grid-rows-3 ">
             <img
               src={myPhoto}
               alt="author"
-              className="absolute top-[20px] left-1/2 transform -translate-x-1/2 w-32 h-32 sm:w-90 border-4 border-pink sm:h-48 rounded-full"
+              className="sm:w-90 h-42 sm:h-40 border-4 border-pink rounded-full mx-auto"
             />
-            <p className="text-blue relative bg-white p-6 rounded-md shadow-lg z-10 mt-20">
-              If you'd like to make an enquiry, please feel free to get in
-              touch, and I will respond as soon as possible. If you prefer to
-              contact me directly, send your Email to: fk.rianja@gmail.com or
-              Submit the form.
+            <p className="text-blue bg-white rounded-md shadow-lg z-10 p-6 mt-4 sm:mt-0">
+              {t("contact.description")}{" "}
+              <span className="font-bold text-pink">fk.rianja@gmail.com </span>{" "}
+              {t("contact.moreDescription")}
             </p>
           </div>
           <form
             method="POST"
             action="https://getform.io/f/anlljzxa"
-            className="flex flex-col max-w-[600px] w-full"
+            className="flex flex-col max-w-[600px] w-full order-1 lg:order-2 "
           >
             <input
               className="bg-white p-2 text-blue rounded-md border-2 border-blue focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
               type="text"
-              placeholder="Name*"
+              placeholder={`${t("contact.form.name")}*`}
               name="name"
               required
             />
@@ -45,11 +46,14 @@ export default function Contact() {
               name="message"
               placeholder="Message*"
               required
-              rows="10"
+              rows={10}
             ></textarea>
-            <p className="pt-2 text-blue font-bold "> (*) Required field</p>
-            <button className="text-white border-2 hover:bg-pink bg-primary hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
-              Let's Collaborate
+            <p className="pt-2 text-blue font-bold ">
+              {" "}
+              (*) {`${t("contact.form.required")}*`}
+            </p>
+            <button className="text-white border-2 rounded-md text-bold hover:bg-pink bg-primary hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
+              {t("contact.form.button")}
             </button>
           </form>
         </div>

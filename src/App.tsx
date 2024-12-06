@@ -5,9 +5,11 @@ import Skills from "./components/skills/Skills";
 import Work from "./components/work/Work";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/Footer";
+import { LanguageProvider } from "./context/LanguageContext";
+
 function App() {
   return (
-    <div>
+    <LanguageProvider>
       <NavBar />
       <Home />
       <About />
@@ -15,7 +17,7 @@ function App() {
       <Work />
       <Contact />
       <Footer />
-    </div>
+    </LanguageProvider>
   );
 }
 

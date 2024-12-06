@@ -1,17 +1,14 @@
+import { useTranslation } from "react-i18next";
+
 export default function Description() {
+  const { t } = useTranslation();
   return (
     <div className="max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4">
       <div className="sm:text-right text-4xl font-bold text-pink">
-        <p>Hi. I'm Kella, nice to meet you. Please take a look around.</p>
+        <p>{t("about.subtitle")}</p>
       </div>
       <div>
-        <p className="text-blue">
-          I am passionate about building excellent software that improves the
-          lives of those around me. I specialize in creating software for
-          clients ranging from individuals and small-businesses all the way to
-          large enterprise corporations. What would you do if you had a software
-          expert available at your fingertips?
-        </p>
+        <p className="text-blue">{t("about.description")}</p>
       </div>
     </div>
   );

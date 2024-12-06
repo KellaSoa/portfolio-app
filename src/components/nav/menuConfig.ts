@@ -1,22 +1,26 @@
-export const menuConfig = [
+interface DataMenu {
+  id: number;
+  value: string;
+}
+export const menuConfig: DataMenu[] = [
   {
     id: 0,
-    value: "Home",
+    value: "home",
   },
   {
     id: 1,
-    value: "About",
+    value: "about",
   },
   {
     id: 2,
-    value: "Skills",
+    value: "skills",
   },
   {
     id: 3,
-    value: "Work",
+    value: "work",
   },
   {
     id: 4,
-    value: "Contact",
+    value: "contact",
   },
 ];
