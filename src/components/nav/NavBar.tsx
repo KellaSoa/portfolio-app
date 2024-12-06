@@ -4,7 +4,7 @@ import Logo from "../../assets/logoPortfolio.png";
 import List from "../ui/List";
 import { menuConfig } from "./menuConfig";
 import { menuSocial } from "./menuSocial";
-import { useLanguage } from "../../context/LanguageContext.tsx";
+import Language from "./Language";
 
 export default function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,11 +17,12 @@ export default function NavBar() {
     setIsMenuOpen(false); // Close menu
   };
 
-  const { language, switchLanguage } = useLanguage();
   return (
     <div className=" fixed top-0 left-0 shadow-md w-full h-[80px] flex justify-end items-center px-4 bg-primary text-white z-20">
       <div className="mr-auto">
-        <img src={Logo} alt="logo" style={{ width: "80px" }} />
+        <a href="#home">
+          <img src={Logo} alt="logo" style={{ width: "80px" }} />
+        </a>
       </div>
       <div className="hidden md:flex">
         <List menus={menuConfig} className="flex space-x-4" />
@@ -45,29 +46,7 @@ export default function NavBar() {
       <div className="hidden lg:flex fixed flex-col top-[35%] left-0 z-20">
         <List menus={menuSocial} className="flex flex-col py-4" />
       </div>
-      <div className="flex items-center space-x-2 order-1 lg:order-2 ">
-        <button
-          onClick={() => switchLanguage("fr")}
-          className={`${
-            language === "fr"
-              ? "bg-yellow font-bold rounded-sm text-center p-1"
-              : "text-white"
-          } hover:text-pink`}
-        >
-          FR
-        </button>
-        <span className="text-white">|</span>
-        <button
-          onClick={() => switchLanguage("en")}
-          className={`${
-            language === "en"
-              ? "bg-yellow font-bold rounded-sm text-center p-1"
-              : "text-white"
-          } hover:text-pink`}
-        >
-          EN
-        </button>
-      </div>
+      <Language />
     </div>
   );
 }
