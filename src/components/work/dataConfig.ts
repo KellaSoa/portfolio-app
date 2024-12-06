@@ -1,7 +1,7 @@
 import Abbicura from "../../assets/projects/abbicuradite.jpeg";
 import pastorale from "../../assets/projects/pastorale.jpeg";
 import aristonEvent from "../../assets/projects/aristonEvent.png";
-import mysales from "../../assets/projects/mysales.jpg";
+import mysales from "../../assets/projects/mysales.png";
 import odgumbria from "../../assets/projects/odgumbria.png";
 import scoplan from "../../assets/projects/scoplan.png";
 

@@ -2,6 +2,7 @@ import { useLanguage } from "../../context/LanguageContext.tsx";
 type LanguageContent = {
   en: string;
   fr: string;
+  [key: string]: string;
 };
 type ProjectType = {
   id: number;
