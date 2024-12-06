@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import Logo from "../../assets/logo1.png";
+import Logo from "../../assets/logoPortfolio.png";
 import List from "../ui/List";
 import { menuConfig } from "./menuConfig";
 import { menuSocial } from "./menuSocial";
@@ -21,7 +21,7 @@ export default function NavBar() {
   return (
     <div className=" fixed top-0 left-0 shadow-md w-full h-[80px] flex justify-end items-center px-4 bg-primary text-white z-20">
       <div className="mr-auto">
-        <img src={Logo} alt="logo" style={{ width: "50px" }} />
+        <img src={Logo} alt="logo" style={{ width: "80px" }} />
       </div>
       <div className="hidden md:flex">
         <List menus={menuConfig} className="flex space-x-4" />

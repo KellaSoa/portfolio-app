@@ -52,7 +52,7 @@ const resources: Resources = {
         title: "Skills",
         subtitle: "Technologies I've worked with",
         description:
-          "Throughout my career, I’ve worked with a diverse range of technologies that empower me to create high-quality applications and websites. From crafting engaging front-end interfaces to building robust back-end systems, these tools and frameworks are at the core of my expertise, enabling me to deliver tailored solutions for various projects and industries.",
+          "Throughout my career, I’ve worked with a diverse range of technologies that empower me to create high-quality applications and websites. From crafting engaging front-end interfaces or building robust back-end, these tools and frameworks are at the core of my expertise, enabling me to deliver tailored solutions for various projects and industries.",
       },
       work: {
         slug: "work",
@@ -68,7 +68,7 @@ const resources: Resources = {
         description:
           "If you'd like to make an enquiry, feel free to get in touch, and I will respond as soon as possible. You can either send me an email directly at: ",
         moreDescription:
-          "or use the contact form below. I look forward to hearing from you!",
+          "or use the contact form. I look forward to hearing from you!",
         form: {
           name: "Name",
           required: "Required field",
@@ -102,14 +102,14 @@ const resources: Resources = {
         title: "À propos",
         subtitle: "Bonjour, je suis Kella. Ravie de vous accueillir",
         description:
-          "Développeuse Full Stack passionnée, je conçois des applications et des sites web qui allient performance, esthétique et expérience utilisateur de qualité. Que ce soit pour développer des plateformes interactives ou des solutions backend robustes, je m'engage à transformer vos idées en projets concrets et innovants.Ce que je préfère dans mon métier, c’est transformer des idées en outils concrets qui aident les utilisateurs au quotidien, qu’il s’agisse d’un site web ou d’une application fonctionnelle",
+          "Développeuse Full Stack passionnée, je conçois des applications et des sites web qui allient performance, esthétique et expérience utilisateur de qualité. Que ce soit pour développer des plateformes interactives, de site web ou des solutions backend robustes, je m'engage à transformer vos idées en projets concrets et innovants.Ce que je préfère dans mon métier, c’est transformer des idées en outils concrets qui aident les utilisateurs au quotidien, qu’il s’agisse d’un site web ou d’une application fonctionnelle",
       },
       skills: {
         slug: "skills",
         title: "Compétences",
         subtitle: "",
         description:
-          "Au cours de ma carrière, j’ai utilisé un large éventail de technologies qui me permettent de créer des applications et des sites web de grande qualité. Qu’il s’agisse de concevoir des interfaces front-end attrayantes ou de développer des systèmes back-end performants, ces outils et frameworks constituent le cœur de mon expertise, me permettant de proposer des solutions adaptées à chaque projet et secteur",
+          "Au cours de ma carrière, j’ai utilisé un large éventail de technologies qui me permettent de créer des applications et des sites web de grande qualité. Qu’il s’agisse de concevoir des interfaces front-end ou des back-end performants, ces outils et frameworks constituent le cœur de mon expertise, me permettant de proposer des solutions adaptées à chaque projet",
       },
       work: {
         slug: "work",
@@ -125,7 +125,7 @@ const resources: Resources = {
         description:
           "Si vous souhaitez faire une demande, n'hésitez pas à me contacter, et je vous répondrai dès que possible. Vous pouvez m'envoyer un e-mail directement à : ",
         moreDescription:
-          "ou utiliser le formulaire de contact ci-dessous. J'ai hâte de recevoir votre message !",
+          "ou utiliser le formulaire de contact. J'ai hâte de recevoir votre message !",
         form: {
           name: "Nom",
           required: "Champ obligatoire",
