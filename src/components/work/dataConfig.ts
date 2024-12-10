@@ -115,7 +115,7 @@ La fonctionnalité principale de MySales repose sur la capacité à scanner les 
     image: scoplan,
     link: "https://www.scoplan.com/",
     overview: {
-      en: "Scoplan is a Provence-based startup focused on digitalizing and enhancing transparency in the civil engineering industry. This platform designed to allow clients to monitor the progress of construction projects directly from their smartphones. This digital tool aims to improve communication and reduce uncertainties in the construction process, providing clients with real-time access to project updates.",
+      en: "Scoplan is a Provence-based startup focused on digitalizing and enhancing transparency in the civil engineering industry. This platform is designed to allow clients to monitor the progress of construction projects directly from their smartphones. This tool aims to improve communication and reduce uncertainties in the construction process, providing clients with real-time access to project updates.",
       fr: "Scoplan est une startup basée en Provence qui se spécialise dans la numérisation et l'amélioration de la transparence dans l'industrie du génie civil. Une plateforme web qui permet aux clients de suivre l'avancement des projets de construction directement depuis leurs smartphones. Cet outil numérique vise à améliorer la communication et à réduire les incertitudes liées au processus de construction, offrant aux clients un accès en temps réel aux mises à jour des projets, un peu comme un portail client pour les services bancaires.",
     },
   },

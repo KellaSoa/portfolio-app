@@ -34,7 +34,7 @@ const resources: Resources = {
         full_name: "Kella Rianjafimamonjisoa",
         job_title: "I'm a Full Stack Developer.",
         description:
-          "I’m a full-stack developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building responsive full-stack web applications.",
+          "I’m a full-stack developer specializing in building an exceptional digital experiences. Currently, I’m focused on building responsive full-stack web applications.",
         nextDescription:
           "I believe that every project begins with an idea,a vision to be realized, and my role is to transform that vision into a high-performance, tailor-made digital solution. I am a developer who loves tackling challenges and finding creative solutions to complex problems. Each project is a new opportunity for me to innovate, learn, and create exceptional user experiences. If you are looking for a partner who is ambitious, determined, and always ready to take on new challenges to turn your vision into reality, then you are in the right place!",
         slogan: "your vision, our mission",
